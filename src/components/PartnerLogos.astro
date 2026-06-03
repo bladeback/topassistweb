@@ -1,0 +1,46 @@
+---
+// Komponenta pro zobrazení partnerských a smluvních pojišťoven v ČR
+// Zobrazujeme je v grayscale s plynulým přechodem do plné barvy / jasu při najetí myší (hover)
+---
+
+<div class="bg-slate-900/50 border-t border-b border-slate-900 py-10 w-full">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">
+      Spolupracujeme se všemi pojišťovnami v ČR – odtah může být zdarma v rámci asistenčních služeb
+    </p>
+    
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
+      
+      <!-- Kooperativa -->
+      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2">
+        Kooperativa
+      </div>
+
+      <!-- Allianz -->
+      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2">
+        Allianz
+      </div>
+
+      <!-- Generali Česká -->
+      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2 text-center leading-tight">
+        Generali Česká
+      </div>
+
+      <!-- ČPP -->
+      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2">
+        ČPP
+      </div>
+
+      <!-- ČSOB Pojišťovna -->
+      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2 text-center leading-tight">
+        ČSOB Pojišťovna
+      </div>
+
+      <!-- Direct -->
+      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2">
+        Direct
+      </div>
+
+    </div>
+  </div>
+</div>

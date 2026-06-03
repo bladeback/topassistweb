@@ -1,0 +1,149 @@
+---
+// Stránka s kontakty a fakturačními údaji firmy TOP-assist24 s.r.o.
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Kontakt a Fakturační Údaje | TOP-assist24 s.r.o." 
+  description="Kontakty a fakturační údaje nonstop odtahové a asistenční služby TOP-assist24. Najdete nás na adrese Hrotovická 1202, Třebíč. Nonstop dispečink."
+>
+  <Header />
+
+  <main class="flex-grow">
+    
+    <!-- Hero / Nadpis sekce -->
+    <section class="py-12 bg-slate-900/30 border-b border-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Kontaktní a fakturační údaje
+        </h1>
+        <p class="mt-2 text-slate-400 max-w-xl">
+          Náš dispečink funguje nonstop 24 hodin denně, 7 dní v týdnu. Kanceláře a základna se nacházejí v Třebíči.
+        </p>
+      </div>
+    </section>
+
+    <!-- Hlavní obsah - grid s kontakty, mapou a formulářem -->
+    <section class="py-16 w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          <!-- Levá část: Kontakty a fakturace -->
+          <div class="space-y-8">
+            
+            <!-- Rychlé SOS kontakty -->
+            <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900">
+              <h2 class="text-xl font-bold text-white mb-4 flex items-center space-x-2">
+                <span class="text-emerald-500">📞</span>
+                <span>Rychlé SOS volání (24/7)</span>
+              </h2>
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                V případě poruchy, nehody nebo nutnosti okamžitého odtahu volejte přímo naši dispečerskou linku.
+              </p>
+              <a 
+                href="tel:+420603167167" 
+                class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-6 py-3 rounded-lg font-black text-lg tracking-wider transition-colors border border-emerald-400"
+              >
+                <span>+420 603 167 167</span>
+              </a>
+            </div>
+
+            <!-- Tabulka s fakturačními údaji -->
+            <div>
+              <h2 class="text-xl font-bold text-white mb-4">Fakturační údaje a sídlo</h2>
+              <div class="bg-slate-900/20 border border-slate-900 rounded-xl overflow-hidden">
+                <table class="w-full text-left text-sm text-slate-300">
+                  <tbody class="divide-y divide-slate-900">
+                    <tr>
+                      <td class="px-6 py-4 font-bold text-slate-400 w-1/3">Název firmy</td>
+                      <td class="px-6 py-4 text-white">TOP-assist24 s.r.o.</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-bold text-slate-400">Sídlo firmy</td>
+                      <td class="px-6 py-4">Polanka 214/10, Třebíč 674 01</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-bold text-slate-400">Hlavní základna</td>
+                      <td class="px-6 py-4 text-white font-semibold">Hrotovická 1202, Třebíč 674 01</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-bold text-slate-400">IČO</td>
+                      <td class="px-6 py-4">06214532</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-bold text-slate-400">DIČ</td>
+                      <td class="px-6 py-4">CZ06214532</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 font-bold text-slate-400">E-mail</td>
+                      <td class="px-6 py-4">
+                        <a href="mailto:info@topassist.cz" class="text-amber-500 hover:underline">info@topassist.cz</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pravá část: Kontaktní formulář -->
+          <div class="bg-slate-900/40 p-8 rounded-xl border border-slate-900">
+            <h2 class="text-xl font-bold text-white mb-6">Napište nám</h2>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              Máte dotaz k asistenčním službám, plánovanému převozu vozidla nebo zájem o dlouhodobou spolupráci? Vyplňte náš formulář a ozveme se vám zpět.
+            </p>
+
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Zpráva byla úspěšně odeslána. Děkujeme!');">
+              <div>
+                <label for="name" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Jméno a příjmení</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  required 
+                  class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 text-sm transition-colors"
+                  placeholder="Např. Jan Novák"
+                />
+              </div>
+
+              <div>
+                <label for="phone" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Telefonní číslo</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  required 
+                  class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 text-sm transition-colors"
+                  placeholder="Např. +420 777 777 777"
+                />
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Vaše zpráva</label>
+                <textarea 
+                  id="message" 
+                  rows="4" 
+                  required 
+                  class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 text-sm transition-colors resize-none"
+                  placeholder="Popište, jak vám můžeme pomoci..."
+                ></textarea>
+              </div>
+
+              <button 
+                type="submit" 
+                class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3.5 px-4 rounded-lg tracking-wide transition-colors uppercase text-sm border-2 border-amber-400"
+              >
+                Odeslat zprávu
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

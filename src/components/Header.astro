@@ -1,0 +1,39 @@
+---
+// Hlavička webu TOP-assist24 s nouzovým CTA tlačítkem
+---
+
+<header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900 w-full">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Logo a název firmy -->
+    <a href="/" class="flex items-center space-x-2 group">
+      <div class="h-10 w-10 bg-amber-500 rounded-lg flex items-center justify-center font-extrabold text-slate-950 text-xl tracking-tighter group-hover:bg-amber-400 transition-colors">
+        TA
+      </div>
+      <div class="flex flex-col">
+        <span class="font-extrabold text-lg sm:text-xl tracking-tight text-white leading-none">TOP-assist24</span>
+        <span class="text-[10px] text-amber-500 font-bold tracking-widest uppercase mt-0.5">Odtahová služba</span>
+      </div>
+    </a>
+
+    <!-- Navigace pro větší obrazovky -->
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+      <a href="/#sluzby" class="hover:text-white transition-colors">Naše služby</a>
+      <a href="/#oblasti" class="hover:text-white transition-colors">Kde působíme</a>
+      <a href="/kontakt" class="hover:text-white transition-colors">Kontakt</a>
+    </nav>
+
+    <!-- Vysoce kontrastní SOS CTA tlačítko - VOLAT NONSTOP -->
+    <!-- Používáme reflexní zelenou pro maximální upoutání pozornosti ve stresu -->
+    <a 
+      href="tel:+420603167167" 
+      class="bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full font-extrabold text-sm sm:text-base tracking-wide shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 flex items-center space-x-2 border-2 border-emerald-400 transition-all duration-200"
+    >
+      <!-- SOS Blikající tečka pro dynamický pocit nonstop dispečinku -->
+      <span class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-slate-950"></span>
+      </span>
+      <span>VOLAT NONSTOP</span>
+    </a>
+  </div>
+</header>

@@ -1,0 +1,115 @@
+---
+// Lokalizovaná stránka pro oblast Jihlava a přilehlé úseky dálnice D1
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import EmergencySteps from '../../components/EmergencySteps.astro';
+import PartnerLogos from '../../components/PartnerLogos.astro';
+import Reviews from '../../components/Reviews.astro';
+import { Image } from 'astro:assets';
+
+// Importujeme obrázek odtahovky
+import heroOdtahovka from '../../assets/images/placeholder-odtahovka.png';
+---
+
+<Layout 
+  title="Odtahová Služba Jihlava Nonstop | TOP-assist24 s.r.o." 
+  description="Hledáte rychlý odtah nebo silniční asistenci v Jihlavě a na dálnici D1? TOP-assist24 je na místě do 20 minut. Nonstop dispečink, vyprošťování aut."
+  cityName="Jihlava"
+>
+  <Header />
+
+  <main class="flex-grow">
+    
+    <!-- Hero Sekce přizpůsobená pro Jihlavu -->
+    <section class="relative bg-slate-950 py-20 overflow-hidden border-b border-slate-900">
+      <div class="absolute inset-0 z-0 opacity-15">
+        <Image 
+          src={heroOdtahovka} 
+          alt="Žlutá odtahovka připravená k zásahu v Jihlavě" 
+          class="w-full h-full object-cover filter grayscale"
+        />
+        <div class="absolute inset-0 bg-slate-950/90"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          
+          <!-- Answer Capsule pro Jihlavu -->
+          <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold text-amber-500 mb-6">
+            Nonstop odtahová služba a vyprošťování Jihlava, Havlíčkův Brod, D1 (exit 112)
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-none">
+            Odtahová služba Jihlava a dálnice D1
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl">
+            Stojíte s nepojízdným autem v Jihlavě nebo na dálnici D1? Naše odtahové vozy jsou strategicky rozmístěny tak, aby zajistily dojezd do 20 minut.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a 
+              href="tel:+420603167167" 
+              class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-center px-8 py-4 rounded-xl font-black text-lg tracking-wider transition-colors border-2 border-emerald-400 shadow-lg shadow-emerald-500/10 flex items-center justify-center space-x-2"
+            >
+              <span>DISPEČINK JIHLAVA: +420 603 167 167</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Steps -->
+    <EmergencySteps />
+
+    <!-- Specifické lokální SEO texty pro Jihlavu -->
+    <section class="py-16 bg-slate-950 w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-slate-300">
+          
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-4">Rychlý odtah a silniční pomoc v Jihlavě</h2>
+            <p class="leading-relaxed mb-4">
+              Jihlava a její okolí, včetně frekventované dálnice D1, jsou oblastí s vysokou hustotou dopravy. Poruchy a nehody zde vyžadují bleskovou reakci asistenční služby. Naše výjezdové stanoviště v Jihlavě zajišťuje okamžitou pomoc pro osobní auta, dodávky i kamiony.
+            </p>
+            <p class="leading-relaxed">
+              Pomůžeme vám nejen s odtahem havarovaného vozidla, ale také s drobnými poruchami přímo na silnici. Zajišťujeme nouzové otevírání aut při zabouchnutí klíčů, výměnu defektní pneumatiky, dovoz paliva nebo nastartování vozu přes startovací kabely.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/40 p-8 rounded-xl border border-slate-900 space-y-4">
+            <h3 class="text-xl font-bold text-white">Proč volit TOP-assist24 v Jihlavě?</h3>
+            <ul class="space-y-3 text-sm text-slate-400">
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Dojezd do 20 minut:</strong> Naše technika parkuje přímo v Jihlavě a na sjezdech z D1.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Zásahy na D1:</strong> Bezpečné vyproštění a odtahy z rizikových úseků dálnice D1.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Spolupráce s pojišťovnami:</strong> Vyřešíme asistenční krytí za vás.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Nonstop dispečink:</strong> Žádné záznamníky, mluvíte přímo s dispečerem.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Partnerské pojišťovny -->
+    <PartnerLogos />
+
+    <!-- Google Recenze -->
+    <Reviews />
+
+  </main>
+
+  <Footer />
+</Layout>

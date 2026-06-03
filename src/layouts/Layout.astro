@@ -1,0 +1,101 @@
+---
+// Importujeme globální styly s Tailwind CSS v4
+import '../styles/global.css';
+
+// Definice TypeScript rozhraní pro parametry (props) této komponenty
+interface Props {
+  title: string;
+  description: string;
+  cityName?: string; // Pokud je zadáno město, přizpůsobíme SEO a JSON-LD schéma
+}
+
+// Získání hodnot předaných z jednotlivých stránek
+const { title, description, cityName } = Astro.props;
+
+// Dynamická konfigurace pro Schema.org (JSON-LD)
+// Upravuje název firmy a popis podle aktuální oblasti působení (např. Třebíč, Jihlava atd.)
+const businessName = cityName 
+  ? `TOP-assist24 s.r.o. - Odtahová služba ${cityName}` 
+  : "TOP-assist24 s.r.o. - Odtahová a asistenční služba nonstop";
+
+const businessDescription = cityName 
+  ? `Profesionální odtahová služba, vyprošťování vozidel a asistenční služby nonstop v oblasti ${cityName} a okolí. Rychlý příjezd.`
+  : "Profesionální odtahová služba, vyprošťování a asistenční služby nonstop. Třebíč, Jihlava, Velké Meziříčí a celá ČR.";
+
+// JSON-LD Schéma pro lokální firmu a nouzovou službu
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "EmergencyService"],
+  "@id": "https://www.topassist.cz/#business",
+  "name": businessName,
+  "description": businessDescription,
+  "url": "https://www.topassist.cz/",
+  "telephone": "+420603167167",
+  "priceRange": "$$",
+  "image": "https://www.topassist.cz/images/hero-odtahovka.jpg", // Bude nahrazeno reálnou fotkou
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hrotovická 1202",
+    "addressLocality": "Třebíč",
+    "postalCode": "674 01",
+    "addressCountry": "CZ"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Třebíč" },
+    { "@type": "AdministrativeArea", "name": "Jihlava" },
+    { "@type": "AdministrativeArea", "name": "Velké Meziříčí" },
+    { "@type": "AdministrativeArea", "name": "Moravské Budějovice" }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "24:00"
+  }
+};
+---
+
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Ikony -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Základní SEO Meta Tagy -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph pro sdílení na sociálních sítích -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    
+    <!-- Google Fonts - Načtení moderního a rychlého písma Outfit a Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Injekce dynamického JSON-LD schématu pro SEO a GEO boty -->
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col selection:bg-amber-400 selection:text-slate-900 scroll-smooth">
+    <!-- Tělo stránky je rozděleno na hlavičku, hlavní obsah a patičku -->
+    <slot />
+  </body>
+</html>

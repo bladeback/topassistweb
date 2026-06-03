@@ -1,0 +1,141 @@
+---
+// Podstránka pro odtah a vyprošťování těžkých nákladních vozidel a autobusů
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+// Importujeme náš vygenerovaný obrázek odtahovky jako pozadí
+import heroOdtahovka from '../../assets/images/placeholder-odtahovka.png';
+---
+
+<Layout 
+  title="Vyprošťování a Odtah Nákladních Aut Nonstop | TOP-assist24" 
+  description="Profesionální vyprošťování a odtah nákladních aut, kamionů, autobusů a těžké techniky. Nonstop dispečink pro celou ČR a D1. Těžká technika."
+>
+  <Header />
+
+  <main class="flex-grow">
+    
+    <!-- Hero / Nadpis sekce -->
+    <section class="relative bg-slate-950 py-16 overflow-hidden border-b border-slate-900">
+      <div class="absolute inset-0 z-0 opacity-15">
+        <Image 
+          src={heroOdtahovka} 
+          alt="Žlutý odtahový vůz zachycený z boku" 
+          class="w-full h-full object-cover filter grayscale"
+        />
+        <div class="absolute inset-0 bg-slate-950/90"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          
+          <!-- Answer Capsule pro SEO/GEO AI Boty -->
+          <div class="inline-block bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full text-xs font-bold text-amber-500 mb-4">
+            Vyprošťovací speciály nonstop pro TIR, autobusy, stavební a zemědělské stroje
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-none">
+            Vyprošťování a odtah nákladních vozidel
+          </h1>
+          <p class="mt-4 text-slate-300 text-base leading-relaxed">
+            Specializujeme se na těžké odtahy a vyprošťování havarovaných kamionů, autobusů a stavebních strojů. Rychlý zásah na D1 a Vysočině.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailní popis služby -->
+    <section class="py-16 w-full bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
+          <!-- Hlavní text (sloupce 1 & 2) -->
+          <div class="lg:col-span-2 space-y-8 text-slate-300">
+            
+            <div>
+              <h2 class="text-2xl font-bold text-white mb-4">Těžká vyprošťovací technika na Vysočině</h2>
+              <p class="leading-relaxed mb-4">
+                Nehody a poruchy těžkých nákladních vozidel často blokují klíčové dopravní tepny. Odtahová služba TOP-assist24 disponuje vyprošťovacími speciály a hydraulickou rukou, které si poradí i s těmi nejsložitějšími situacemi na silnicích a dálnicích, včetně vyproštění plně naložených kamionů (TIR) z příkopů nebo svahů.
+              </p>
+              <p class="leading-relaxed">
+                Náš tým je vyškolen pro manipulaci s těžkou technikou a provádí vyprošťování šetrně, aby nedošlo k dalšímu poškození podvozku nebo nákladu. Pro odtah využíváme speciální brýle a tažná zařízení odpovídající evropským standardům pro přepravu nákladních automobilů a autobusů.
+              </p>
+            </div>
+
+            <!-- Výhody služby -->
+            <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900">
+              <h3 class="text-lg font-bold text-white mb-4">Nákladní asistence a služby</h3>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-400">
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Odtah tahačů, návěsů a celých souprav</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Vyprošťování po nehodě těžkými navijáky</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Překládka a zajištění náhradního transportu zboží</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Manipulace s nákladem hydraulickou rukou</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Zajištění doprovodných vozidel</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Doprava náhradních dílů a technická pomoc</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-white mb-3">Zásahy na dálnici D1</h2>
+              <p class="leading-relaxed">
+                Díky výhodné poloze našich základen v Třebíči a Jihlavě jsme schopni garantovat extrémně rychlé dojezdové časy na dálnici D1 (zejména úseky v kraji Vysočina). Spolupracujeme s Policií ČR a Správou a údržbou silnic pro co nejrychlejší zprůjezdnění zablokovaných jízdních pruhů.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Pravý boční panel - SOS Call to Action -->
+          <div class="space-y-6">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-xl border-2 border-emerald-500/20 text-center">
+              <span class="text-4xl mb-4 block">🚛</span>
+              <h3 class="text-xl font-bold text-white mb-2">SOS Odtah Kamionů & TIR</h3>
+              <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                Nouzová linka pro dispečery a řidiče kamionů. Zajišťujeme vyproštění a odtahy 24/7 po celé ČR a přilehlých státech.
+              </p>
+              <a 
+                href="tel:+420603167167" 
+                class="block w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-4 rounded-lg tracking-wider text-base transition-colors border border-emerald-400"
+              >
+                SOS: +420 603 167 167
+              </a>
+            </div>
+
+            <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900">
+              <h4 class="font-bold text-white mb-3">Technické vybavení</h4>
+              <ul class="space-y-2 text-sm text-slate-400">
+                <li>• Vyprošťovací speciál s pohonem 8x8</li>
+                <li>• Hydraulická ruka pro těžká břemena</li>
+                <li>• Speciální podvalníky pro stroje</li>
+                <li>• Výkonné lanové navijáky</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

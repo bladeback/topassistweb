@@ -1,0 +1,141 @@
+---
+// Podstránka pro odtah a asistenční služby osobních vozidel
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+// Importujeme náš vygenerovaný obrázek odtahovky jako pozadí
+import heroOdtahovka from '../../assets/images/placeholder-odtahovka.png';
+---
+
+<Layout 
+  title="Odtah Osobních Vozidel Nonstop Třebíč & Vysočina | TOP-assist24" 
+  description="Hledáte rychlý odtah osobního auta, motocyklu nebo dodávky? Zajišťujeme nonstop odtahy po celé ČR a EU. Rychlý příjezd na místo nehody."
+>
+  <Header />
+
+  <main class="flex-grow">
+    
+    <!-- Hero / Nadpis sekce -->
+    <section class="relative bg-slate-950 py-16 overflow-hidden border-b border-slate-900">
+      <div class="absolute inset-0 z-0 opacity-15">
+        <Image 
+          src={heroOdtahovka} 
+          alt="Žlutý odtahový vůz zachycený z boku" 
+          class="w-full h-full object-cover filter grayscale"
+        />
+        <div class="absolute inset-0 bg-slate-950/90"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          
+          <!-- Answer Capsule pro SEO/GEO AI Boty -->
+          <div class="inline-block bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full text-xs font-bold text-amber-500 mb-4">
+            Nonstop odtahová služba pro osobní vozy, SUV a dodávky
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-none">
+            Odtahová služba pro osobní auta
+          </h1>
+          <p class="mt-4 text-slate-300 text-base leading-relaxed">
+            Zajistíme rychlou přepravu vašeho nepojízdného nebo havarovaného vozidla. Působíme v okresech Třebíč, Jihlava a po celé dálnici D1.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailní popis služby -->
+    <section class="py-16 w-full bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
+          <!-- Hlavní text (sloupce 1 & 2) -->
+          <div class="lg:col-span-2 space-y-8 text-slate-300">
+            
+            <div>
+              <h2 class="text-2xl font-bold text-white mb-4">Spolehlivý odtah v každé situaci</h2>
+              <p class="leading-relaxed mb-4">
+                Ať už jste se stali účastníky dopravní nehody, postihla vás nečekaná porucha motoru, defekt pneumatiky, nebo jste načerpali špatné palivo, náš tým je připraven okamžitě vyrazit na pomoc. Odtahová služba TOP-assist24 disponuje moderní technikou, která zaručuje bezpečné naložení a transport vozidla bez dalšího poškození.
+              </p>
+              <p class="leading-relaxed">
+                Přepravujeme nejen klasické osobní automobily, ale také nízké sportovní vozy, těžká SUV, veterány, motocykly a užitkové dodávky. Naše vozidla jsou vybavena hydraulickými navijáky a fixačními prvky nejvyšší kvality.
+              </p>
+            </div>
+
+            <!-- Výhody služby -->
+            <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900">
+              <h3 class="text-lg font-bold text-white mb-4">Co vše zajišťujeme v rámci odtahu?</h3>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-400">
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Odtah po celé ČR a Evropské unii</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Vyproštění vozidla mimo komunikaci</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Ekologická likvidace autovraků</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Nonstop dispečink a rychlý dojezd</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Dovoz paliva nebo pomoc s defektem</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Zprostředkování náhradního vozidla</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-white mb-3">Spolupráce s pojišťovnami</h2>
+              <p class="leading-relaxed">
+                Jako smluvní partner většiny pojišťoven v České republice vám pomůžeme vyřídit asistenční služby přímo na místě. Pokud máte sjednané povinné ručení nebo havarijní pojištění, odtah vašeho vozidla může být pojišťovnou plně nebo částečně hrazen. Náš řidič s vámi vyplní veškeré potřebné protokoly pro pojišťovnu.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Pravý boční panel - SOS Call to Action -->
+          <div class="space-y-6">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-xl border-2 border-emerald-500/20 text-center">
+              <span class="text-4xl mb-4 block">🚨</span>
+              <h3 class="text-xl font-bold text-white mb-2">Potřebujete odtáhnout auto?</h3>
+              <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                Náš dispečink je připraven přijmout váš hovor 24 hodin denně. Průměrná dojezdová doba v Třebíči a okolí je 20 minut.
+              </p>
+              <a 
+                href="tel:+420603167167" 
+                class="block w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-4 rounded-lg tracking-wider text-base transition-colors border border-emerald-400"
+              >
+                VOLAT NONSTOP DISPEČINK
+              </a>
+            </div>
+
+            <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900">
+              <h4 class="font-bold text-white mb-3">Naše výhody</h4>
+              <ul class="space-y-2 text-sm text-slate-400">
+                <li>• Férové a transparentní jednání</li>
+                <li>• Zkušení a proškolení řidiči</li>
+                <li>• Pojištění přepravovaných nákladů</li>
+                <li>• Nonstop pohotovost i o svátcích</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

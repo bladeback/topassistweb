@@ -1,0 +1,284 @@
+---
+// Importujeme základní šablonu (Layout) a znovupoužitelné komponenty
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import EmergencySteps from '../components/EmergencySteps.astro';
+import PartnerLogos from '../components/PartnerLogos.astro';
+import Reviews from '../components/Reviews.astro';
+
+// Importujeme nativní komponentu pro optimalizaci obrázků z Astro
+import { Image } from 'astro:assets';
+
+// Importujeme náš vygenerovaný obrázek odtahového vozu
+import heroOdtahovka from '../assets/images/placeholder-odtahovka.png';
+---
+
+<Layout 
+  title="Nonstop Odtahová Služba Třebíč & Vysočina | TOP-assist24" 
+  description="Hledáte rychlý odtah nebo pomoc na silnici? TOP-assist24 zajišťuje nonstop odtahovou službu, vyprošťování aut i kamionů a nouzové otevírání vozidel. Dojezd do 20 min."
+>
+  <!-- Hlavička webu -->
+  <Header />
+
+  <!-- HLAVNÍ OBSAH (Hero sekce) -->
+  <main class="flex-grow">
+    
+    <!-- Hero Sekce s optimalizovaným obrázkem na pozadí a signálními CTA prvky -->
+    <section class="relative bg-slate-950 py-20 lg:py-32 overflow-hidden border-b border-slate-900">
+      <div class="absolute inset-0 z-0 opacity-20">
+        <!-- Vykreslení optimalizovaného obrázku odtahovky přes celé pozadí -->
+        <Image 
+          src={heroOdtahovka} 
+          alt="Profesionální žlutý odtahový vůz na dálnici" 
+          class="w-full h-full object-cover filter grayscale"
+          loading="eager"
+        />
+        <!-- Barevný přechod pro ztmavení obrázku na pozadí a lepší čitelnost textu -->
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          
+          <!-- Answer Capsule (SEO / GEO / AI ready) -->
+          <!-- Poskytuje okamžitou a přímou odpověď vyhledávačům a uživatelům -->
+          <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold text-amber-500 mb-6">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+            <span>Nonstop odtah Třebíč, Jihlava, D1 a celá ČR</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
+            Rychlý odtah vozidel <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">a pomoc na silnici nonstop</span>
+          </h1>
+
+          <p class="mt-6 text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed">
+            Stojíte u krajnice a potřebujete odtah? TOP-assist24 je tu pro vás 24/7. Nabízíme odtah osobních i užitkových vozidel, vyprošťování, asistenční služby a pomoc při zabouchnutí klíčů.
+          </p>
+
+          <!-- Dvě hlavní SOS tlačítka s vysokým kontrastem -->
+          <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <!-- Volat dispečink (Reflexní zelená) -->
+            <a 
+              href="tel:+420603167167" 
+              class="bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 text-center px-8 py-4 rounded-xl font-black text-lg tracking-wider transition-all duration-200 border-2 border-emerald-400 shadow-xl shadow-emerald-500/10 flex items-center justify-center space-x-3"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>+420 603 167 167</span>
+            </a>
+
+            <!-- Sdílet polohu (Signální oranžová/amber) -->
+            <button 
+              id="share-location-btn" 
+              class="bg-amber-500 hover:bg-amber-400 active:scale-95 text-slate-950 text-center px-6 py-4 rounded-xl font-bold text-base tracking-wide transition-all duration-200 border-2 border-amber-400 shadow-xl shadow-amber-500/10 flex items-center justify-center space-x-3"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Sdílet polohu přes SMS</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Komponenta se stresovými nouzovými kroky -->
+    <EmergencySteps />
+
+    <!-- Sekce Služby -->
+    <section id="sluzby" class="py-20 bg-slate-950 w-full border-b border-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Komplexní asistenční a odtahové služby nonstop
+          </h2>
+          <p class="mt-4 text-slate-400">
+            Zajistíme rychlou a bezpečnou pomoc v jakékoliv krizové situaci. Disponujeme moderním vozovým parkem pro odtah aut a těžké techniky.
+          </p>
+        </div>
+
+        <!-- Mřížka služeb -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Služba 1 -->
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900 hover:border-slate-800 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="h-10 w-10 bg-amber-500/10 text-amber-500 rounded-lg flex items-center justify-center mb-4">
+                🚗
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Odtah osobních aut</h3>
+              <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                Rychlý odtah poškozených, havarovaných nebo porouchaných osobních automobilů, motocyklů a dodávek po celé ČR a EU.
+              </p>
+            </div>
+            <a href="/sluzby/odtah-osobnich" class="text-amber-500 hover:text-amber-400 font-semibold text-xs tracking-wider uppercase flex items-center space-x-1">
+              <span>Více informací</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Služba 2 -->
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900 hover:border-slate-800 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="h-10 w-10 bg-amber-500/10 text-amber-500 rounded-lg flex items-center justify-center mb-4">
+                🚛
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Vyproštění nákladních</h3>
+              <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                Profesionální vyprošťování a odtah těžké techniky, autobusů, nákladních vozů a kamionů pomocí speciálních vyprošťovacích speciálů.
+              </p>
+            </div>
+            <a href="/sluzby/vyprosteni-nakladni" class="text-amber-500 hover:text-amber-400 font-semibold text-xs tracking-wider uppercase flex items-center space-x-1">
+              <span>Více informací</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Služba 3 -->
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900 hover:border-slate-800 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="h-10 w-10 bg-amber-500/10 text-amber-500 rounded-lg flex items-center justify-center mb-4">
+                🔑
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Nouzový autozámečník</h3>
+              <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                Nouzové otevírání aut všech značek při zabouchnutí nebo ztrátě klíčů. Šetrně, rychle a bez jakéhokoliv poškození laku a zámku.
+              </p>
+            </div>
+            <a href="/sluzby/autozamecnik" class="text-amber-500 hover:text-amber-400 font-semibold text-xs tracking-wider uppercase flex items-center space-x-1">
+              <span>Více informací</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Služba 4 -->
+          <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900 hover:border-slate-800 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="h-10 w-10 bg-amber-500/10 text-amber-500 rounded-lg flex items-center justify-center mb-4">
+                🚲
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Cykloasistence</h3>
+              <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                Pomoc pro cyklisty na cestách. Zajistíme odvoz porouchaného nebo poškozeného kola (včetně elektrokol) i s jezdcem do servisu či domů.
+              </p>
+            </div>
+            <a href="/sluzby/cykloasistence" class="text-amber-500 hover:text-amber-400 font-semibold text-xs tracking-wider uppercase flex items-center space-x-1">
+              <span>Více informací</span>
+              <span>→</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Oblasti Působení Sekce (GEO lokální SEO cílení) -->
+    <section id="oblasti" class="py-20 bg-slate-900/40 border-b border-slate-900 w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-white tracking-tight">Kde nejčastěji pomáháme?</h2>
+          <p class="mt-4 text-slate-400">
+            Naše výjezdová stanoviště jsou strategicky rozmístěna po Vysočině tak, aby dojezdová doba na místo nehody byla co nejkratší.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Třebíč -->
+          <a href="/" class="bg-slate-950 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all text-center group">
+            <h3 class="font-extrabold text-lg text-white mb-1 group-hover:text-amber-500 transition-colors">Třebíč a okolí</h3>
+            <p class="text-xs text-slate-400">Hlavní základna, dojezd do 15 min</p>
+          </a>
+          <!-- Jihlava -->
+          <a href="/oblast-pusobeni/jihlava" class="bg-slate-950 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all text-center group">
+            <h3 class="font-extrabold text-lg text-white mb-1 group-hover:text-amber-500 transition-colors">Jihlava a D1</h3>
+            <p class="text-xs text-slate-400">Pobočka Jihlava, rychlý výjezd na D1</p>
+          </a>
+          <!-- Velké Meziříčí -->
+          <a href="/oblast-pusobeni/velke-mezirici" class="bg-slate-950 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all text-center group">
+            <h3 class="font-extrabold text-lg text-white mb-1 group-hover:text-amber-500 transition-colors">Velké Meziříčí</h3>
+            <p class="text-xs text-slate-400">Silniční asistence a odtahy D1</p>
+          </a>
+          <!-- Moravské Budějovice -->
+          <a href="/oblast-pusobeni/moravske-budejovice" class="bg-slate-950 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-all text-center group">
+            <h3 class="font-extrabold text-lg text-white mb-1 group-hover:text-amber-500 transition-colors">Moravské Budějovice</h3>
+            <p class="text-xs text-slate-400">Trasa na Znojmo a Rakousko</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loga partnerských pojišťoven -->
+    <PartnerLogos />
+
+    <!-- Google Recenze pro social proof -->
+    <Reviews />
+
+  </main>
+
+  <!-- Patička webu -->
+  <Footer />
+</Layout>
+
+<!-- Klientský JavaScript pro sdílení GPS polohy přes SMS -->
+<script>
+  // Získáme referenci na SOS tlačítko sdílení polohy
+  const shareBtn = document.getElementById('share-location-btn');
+  
+  if (shareBtn) {
+    shareBtn.addEventListener('click', () => {
+      // Ověříme, zda prohlížeč podporuje Geolocation API
+      if (navigator.geolocation) {
+        // Změníme text tlačítka na načítací režim pro zpětnou vazbu uživateli
+        const originalText = shareBtn.innerHTML;
+        shareBtn.innerHTML = `
+          <svg class="animate-spin h-5 w-5 mr-3 text-slate-950" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          <span>Zjišťuji GPS...</span>
+        `;
+        
+        // Vyžádáme si aktuální GPS souřadnice s vysokou přesností
+        navigator.geolocation.getCurrentPosition(
+          (position: GeolocationPosition) => {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            
+            // Sestavíme text zprávy obsahující odkaz na Google Maps s přesnými souřadnicemi
+            const message = `Potrebuji odtah. Moje poloha: https://maps.google.com/?q=${lat},${lng}`;
+            
+            // Zakódujeme zprávu pro bezpečný přenos v URI
+            const encodedMsg = encodeURIComponent(message);
+            
+            // Sestavíme sms: odkaz na nonstop dispečink
+            const smsUrl = `sms:+420603167167?body=${encodedMsg}`;
+            
+            // Vrátíme tlačítku původní vzhled a přesměrujeme uživatele na nativní odeslání SMS
+            shareBtn.innerHTML = originalText;
+            window.location.href = smsUrl;
+          },
+          (error: GeolocationPositionError) => {
+            console.error('Chyba při zjišťování polohy:', error);
+            alert("Nepodařilo se zjistit přesnou polohu. Povolte prosím sdílení polohy v prohlížeči nebo nás kontaktujte přímo telefonicky.");
+            shareBtn.innerHTML = originalText;
+          },
+          {
+            enableHighAccuracy: true, // Vyžadovat vysokou přesnost (GPS čip)
+            timeout: 8000,            // Limit 8 sekund na získání polohy
+            maximumAge: 0             // Nechceme starou nacachovanou polohu
+          }
+        );
+      } else {
+        alert("Váš telefon nebo internetový prohlížeč nepodporuje sdílení polohy. Zavolejte nám přímo.");
+      }
+    });
+  }
+</script>

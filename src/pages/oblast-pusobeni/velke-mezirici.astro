@@ -1,0 +1,115 @@
+---
+// Lokalizovaná stránka pro oblast Velké Meziříčí a přilehlé úseky dálnice D1
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import EmergencySteps from '../../components/EmergencySteps.astro';
+import PartnerLogos from '../../components/PartnerLogos.astro';
+import Reviews from '../../components/Reviews.astro';
+import { Image } from 'astro:assets';
+
+// Importujeme obrázek odtahovky
+import heroOdtahovka from '../../assets/images/placeholder-odtahovka.png';
+---
+
+<Layout 
+  title="Odtahová Služba Velké Meziříčí Nonstop | TOP-assist24 s.r.o." 
+  description="Porucha nebo nehoda u Velkého Meziříčí či na dálnici D1? TOP-assist24 nabízí rychlý odtah aut i kamionů a nonstop silniční asistenci. Dojezd do 20 minut."
+  cityName="Velké Meziříčí"
+>
+  <Header />
+
+  <main class="flex-grow">
+    
+    <!-- Hero Sekce přizpůsobená pro Velké Meziříčí -->
+    <section class="relative bg-slate-950 py-20 overflow-hidden border-b border-slate-900">
+      <div class="absolute inset-0 z-0 opacity-15">
+        <Image 
+          src={heroOdtahovka} 
+          alt="Žlutá odtahovka připravená k zásahu ve Velkém Meziříčí" 
+          class="w-full h-full object-cover filter grayscale"
+        />
+        <div class="absolute inset-0 bg-slate-950/90"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          
+          <!-- Answer Capsule pro Velké Meziříčí -->
+          <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold text-amber-500 mb-6">
+            Nonstop odtahová služba a vyprošťování Velké Meziříčí, D1 (exit 141 / 146)
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-none">
+            Odtahová služba Velké Meziříčí
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl">
+            Asistenční a vyprošťovací služby u Velkého Meziříčí a na přilehlých úsecích dálnice D1. Rychlý příjezd k poruchám a nehodám.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a 
+              href="tel:+420603167167" 
+              class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-center px-8 py-4 rounded-xl font-black text-lg tracking-wider transition-colors border-2 border-emerald-400 shadow-lg shadow-emerald-500/10 flex items-center justify-center space-x-2"
+            >
+              <span>DISPEČINK MEZIŘÍČÍ: +420 603 167 167</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Steps -->
+    <EmergencySteps />
+
+    <!-- Specifické lokální SEO texty -->
+    <section class="py-16 bg-slate-950 w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-slate-300">
+          
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-4">Nonstop pomoc pro řidiče u Velkého Meziříčí</h2>
+            <p class="leading-relaxed mb-4">
+              Velké Meziříčí a dálniční most Vysočina jsou známé zvýšeným rizikem nehod a kolon, zejména v zimním období. Naše odtahové a vyprošťovací vozy hlídkují v této lokalitě, aby zajistily okamžitý odtah nepojízdných vozidel a zamezily tvorbě nebezpečných situací.
+            </p>
+            <p class="leading-relaxed">
+              Zajišťujeme odtahy osobních aut, motocyklů, dodávek i těžkých kamionů (TIR). V případě drobnějších poruch (vybitá autobaterie, defekt pneumatiky, zabouchnuté klíče v autě) vyřeší náš mobilní technik problém přímo na místě bez nutnosti odtahu.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/40 p-8 rounded-xl border border-slate-900 space-y-4">
+            <h3 class="text-xl font-bold text-white">Naše přednosti v lokalitě Velké Meziříčí</h3>
+            <ul class="space-y-3 text-sm text-slate-400">
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Rychlý výjezd na D1:</strong> Stanoviště v blízkosti dálničních exitů 141 a 146.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Profesionální technika:</strong> Speciální navijáky pro vyproštění z těžkého terénu.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Bezhotovostní platba:</strong> Odtah může být hrazen z vašeho asistenčního pojištění.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Nonstop dispečink:</strong> Volat můžete 24 hodin denně, 365 dní v roce.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Partnerské pojišťovny -->
+    <PartnerLogos />
+
+    <!-- Google Recenze -->
+    <Reviews />
+
+  </main>
+
+  <Footer />
+</Layout>

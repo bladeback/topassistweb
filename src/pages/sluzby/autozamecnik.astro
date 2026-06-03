@@ -1,0 +1,138 @@
+---
+// Podstránka pro nouzové otevírání automobilů (autozámečnické služby)
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+// Importujeme náš vygenerovaný obrázek odtahovky jako pozadí
+import heroOdtahovka from '../../assets/images/placeholder-odtahovka.png';
+---
+
+<Layout 
+  title="Nouzové Otevírání Aut Nonstop Třebíč & Jihlava | TOP-assist24" 
+  description="Zabouchli jste si klíče v autě nebo je ztratili? Zajišťujeme nouzové otevírání aut nonstop. Rychle, šetrně a bez poškození laku. Autozámečník."
+>
+  <Header />
+
+  <main class="flex-grow">
+    
+    <!-- Hero / Nadpis sekce -->
+    <section class="relative bg-slate-950 py-16 overflow-hidden border-b border-slate-900">
+      <div class="absolute inset-0 z-0 opacity-15">
+        <Image 
+          src={heroOdtahovka} 
+          alt="Žlutý odtahový vůz zachycený z boku" 
+          class="w-full h-full object-cover filter grayscale"
+        />
+        <div class="absolute inset-0 bg-slate-950/90"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          
+          <!-- Answer Capsule pro SEO/GEO AI Boty -->
+          <div class="inline-block bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full text-xs font-bold text-amber-500 mb-4">
+            Nouzové otevírání osobních a nákladních aut všech značek nonstop
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-none">
+            Nouzový autozámečník
+          </h1>
+          <p class="mt-4 text-slate-300 text-base leading-relaxed">
+            Zabouchnuté nebo ztracené klíče od auta? Naši specialisté otevřou jakékoliv vozidlo šetrně a bez škrábance. Působíme nonstop.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailní popis služby -->
+    <section class="py-16 w-full bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
+          <!-- Hlavní text (sloupce 1 & 2) -->
+          <div class="lg:col-span-2 space-y-8 text-slate-300">
+            
+            <div>
+              <h2 class="text-2xl font-bold text-white mb-4">Šetrné otevření auta bez poškození</h2>
+              <p class="leading-relaxed mb-4">
+                Zabouchnutí klíčů v autě na parkovišti u nákupního centra nebo uprostřed přírody je nepříjemná situace, která vyžaduje rychlé řešení. Rozhodně se nepokoušejte auto otevírat svépomocí – hrozí poškození těsnění dveří, poškrábání laku, zničení zámku nebo rozbití okna, což ve výsledku stojí mnohonásobně více než zásah odborníka.
+              </p>
+              <p class="leading-relaxed">
+                Naši technici používají profesionální zámečnické přípravky a speciální přípravky, pomocí kterých otevřou zámky a dveře aut bez jakýchkoliv stop poškození. Otevřeme starší modely i moderní auta se složitými elektronickými zabezpečovacími systémy a dvojitým zamykáním (safe-lock).
+              </p>
+            </div>
+
+            <!-- Výhody služby -->
+            <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900">
+              <h3 class="text-lg font-bold text-white mb-4">Kdy volat našeho autozámečníka?</h3>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-400">
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Klíče zabouchnuté v kabině nebo kufru</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Ztráta klíčů (otevření pro následný odtah)</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Vybitá autobaterie (nefunkční dálkové ovládání)</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Zlomený klíč v zámku nebo zapalování</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Poškozený nebo zablokovaný zámek</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="text-amber-500">✓</span>
+                  <span>Otevírání vozidel s běžícím motorem</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-bold text-white mb-3">Rychlý dojezd nonstop 24/7</h2>
+              <p class="leading-relaxed">
+                Naše výjezdová vozidla jsou vybavena kompletní sadou autozámečnického nářadí. Po zavolání na náš nonstop dispečink technik okamžitě startuje a vyráží na místo. V Třebíči a Jihlavě jsme u vás zpravidla do 15–25 minut od nahlášení události.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Pravý boční panel - SOS Call to Action -->
+          <div class="space-y-6">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-xl border-2 border-emerald-500/20 text-center">
+              <span class="text-4xl mb-4 block">🔑</span>
+              <h3 class="text-xl font-bold text-white mb-2">Zabouchnuté klíče v autě?</h3>
+              <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                Nejrychlejší pomoc na Vysočině. Technik je připraven okamžitě vyrazit a otevřít vaše auto.
+              </p>
+              <a 
+                href="tel:+420603167167" 
+                class="block w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-4 rounded-lg tracking-wider text-base transition-colors border border-emerald-400"
+              >
+                VOLAT AUTOZÁMEČNÍKA
+              </a>
+            </div>
+
+            <div class="bg-slate-900/40 p-6 rounded-xl border border-slate-900">
+              <h4 class="font-bold text-white mb-3">Důležité upozornění</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Před otevřením vozidla je technik povinen ověřit vaši totožnost a vlastnictví vozidla (případně nájemní vztah) nahlédnutím do dokladů totožnosti a dokladů od vozidla (malý technický průkaz apod.). Děkujeme za pochopení.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

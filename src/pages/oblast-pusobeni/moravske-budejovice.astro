@@ -1,0 +1,115 @@
+---
+// Lokalizovaná stránka pro oblast Moravské Budějovice a silniční tah na Znojmo / Rakousko
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import EmergencySteps from '../../components/EmergencySteps.astro';
+import PartnerLogos from '../../components/PartnerLogos.astro';
+import Reviews from '../../components/Reviews.astro';
+import { Image } from 'astro:assets';
+
+// Importujeme obrázek odtahovky
+import heroOdtahovka from '../../assets/images/placeholder-odtahovka.png';
+---
+
+<Layout 
+  title="Odtahová Služba Moravské Budějovice Nonstop | TOP-assist24 s.r.o." 
+  description="Hledáte spolehlivý odtah nebo asistenční službu v Moravských Budějovicích a na trase Znojmo - Rakousko? TOP-assist24 vyjíždí ihned. Dojezd do 20 minut."
+  cityName="Moravské Budějovice"
+>
+  <Header />
+
+  <main class="flex-grow">
+    
+    <!-- Hero Sekce přizpůsobená pro Moravské Budějovice -->
+    <section class="relative bg-slate-950 py-20 overflow-hidden border-b border-slate-900">
+      <div class="absolute inset-0 z-0 opacity-15">
+        <Image 
+          src={heroOdtahovka} 
+          alt="Žlutá odtahovka připravená k zásahu v Moravských Budějovicích" 
+          class="w-full h-full object-cover filter grayscale"
+        />
+        <div class="absolute inset-0 bg-slate-950/90"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          
+          <!-- Answer Capsule pro Moravské Budějovice -->
+          <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold text-amber-500 mb-6">
+            Nonstop odtahová služba Moravské Budějovice, Jaroměřice nad Rokytnou, trasa Znojmo - Rakousko
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-none">
+            Odtahová služba Moravské Budějovice
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl">
+            Asistenční služby, vyprošťování a odtah vozidel nonstop v Moravských Budějovicích a na hlavním silničním tahu I/38.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a 
+              href="tel:+420603167167" 
+              class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-center px-8 py-4 rounded-xl font-black text-lg tracking-wider transition-colors border-2 border-emerald-400 shadow-lg shadow-emerald-500/10 flex items-center justify-center space-x-2"
+            >
+              <span>DISPEČINK BUDĚJOVICE: +420 603 167 167</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Steps -->
+    <EmergencySteps />
+
+    <!-- Specifické lokální SEO texty -->
+    <section class="py-16 bg-slate-950 w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-slate-300">
+          
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-4">Nonstop asistenční služby Moravské Budějovice</h2>
+            <p class="leading-relaxed mb-4">
+              Oblast Moravských Budějovic a silniční tah I/38 vedoucí směrem na Znojmo a rakouské hranice je tranzitní trasou s vysokým pohybem osobních i tranzitních nákladních automobilů. Naše asistenční vozidla jsou připravena okamžitě vyjet k jakékoliv nehodě či technické závadě.
+            </p>
+            <p class="leading-relaxed">
+              Zajišťujeme nejen odtahy poškozených vozidel, ale také nouzové opravy na místě, dovoz paliva, nastartování vybité baterie, pomoc při defektu pneumatiky nebo nouzové otevření vozidla při zabouchnutí klíčů. Transportujeme vozidla po celé ČR i do zahraničí (např. Rakousko).
+            </p>
+          </div>
+
+          <div class="bg-slate-900/40 p-8 rounded-xl border border-slate-900 space-y-4">
+            <h3 class="text-xl font-bold text-white">Naše služby v Moravských Budějovicích</h3>
+            <ul class="space-y-3 text-sm text-slate-400">
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Rychlá odezva nonstop:</strong> Výjezdová technika na trase I/38 s příjezdem do 20 minut.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Odtah do Rakouska / z Rakouska:</strong> Bezproblémový transport vozidel přes hranice.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Komunikace s pojišťovnami:</strong> Zajištění bezplatného odtahu v rámci asistence.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-amber-500 font-bold">✓</span>
+                <span><strong>Široký autopark:</strong> Odtahovky pro motocykly, nízké vozy i užitková auta.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Partnerské pojišťovny -->
+    <PartnerLogos />
+
+    <!-- Google Recenze -->
+    <Reviews />
+
+  </main>
+
+  <Footer />
+</Layout>
