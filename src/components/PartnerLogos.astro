@@ -1,44 +1,48 @@
 ---
-// Komponenta pro zobrazení partnerských a smluvních pojišťoven v ČR
-// Zobrazujeme je v grayscale s plynulým přechodem do plné barvy / jasu při najetí myší (hover)
+// Importujeme komponentu Image z Astro pro automatickou optimalizaci velikosti a formátu obrázků
+import { Image } from 'astro:assets';
+
+// Importujeme loga asistenčních služeb ze složky src/assets/images
+import axaLogo from '../assets/images/Axa_assistant_logo.png';
+import europLogo from '../assets/images/Europ_Assistance_logo.jpg';
+import eurocrossLogo from '../assets/images/eurocross_assistance_logo.png';
+import uamkLogo from '../assets/images/logo-uamk-2014-clr.jpg';
+import barinkLogo from '../assets/images/697-barinkpng.png';
 ---
 
-<div class="bg-slate-900/50 border-t border-b border-slate-900 py-10 w-full">
+<div class="bg-slate-900/50 border-t border-b border-slate-900 py-12 w-full">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">
-      Spolupracujeme se všemi pojišťovnami v ČR – odtah může být zdarma v rámci asistenčních služeb
+    <!-- Nadpis sekce upravený dle požadavku klienta -->
+    <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-10">
+      Spolupracujeme s těmito asistenčními službami
     </p>
-    
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
-      
-      <!-- Kooperativa -->
-      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2">
-        Kooperativa
+
+    <!-- Mřížka s logy asistenčních služeb bez ohraničujících rámečků/obdélníků, loga jsou zvětšena o dalších 50 % (max-h-24) -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-items-center">
+
+      <!-- AXA Assistance -->
+      <div class="flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300 select-none">
+        <Image src={axaLogo} alt="AXA Assistance" class="max-h-24 w-auto object-contain" />
       </div>
 
-      <!-- Allianz -->
-      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2">
-        Allianz
+      <!-- Europ Assistance -->
+      <div class="flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300 select-none">
+        <Image src={europLogo} alt="Europ Assistance" class="max-h-24 w-auto object-contain" />
       </div>
 
-      <!-- Generali Česká -->
-      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2 text-center leading-tight">
-        Generali Česká
+      <!-- Eurocross Assistance -->
+      <div class="flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300 select-none">
+        <Image src={eurocrossLogo} alt="Eurocross Assistance" class="max-h-24 w-auto object-contain" />
       </div>
 
-      <!-- ČPP -->
-      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2">
-        ČPP
+      <!-- ÚAMK -->
+      <div class="flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300 select-none">
+        <Image src={uamkLogo} alt="ÚAMK" class="max-h-24 w-auto object-contain" />
       </div>
 
-      <!-- ČSOB Pojišťovna -->
-      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2 text-center leading-tight">
-        ČSOB Pojišťovna
-      </div>
-
-      <!-- Direct -->
-      <div class="h-14 w-full bg-slate-950/60 rounded-xl border border-slate-800 flex items-center justify-center text-xs text-slate-400 font-extrabold uppercase tracking-wider opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:border-slate-700 hover:bg-slate-950 transition-all duration-300 select-none px-4 py-2">
-        Direct
+      <!-- Ostatní asistence (Barink) -->
+      <div class="flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300 select-none">
+        <Image src={barinkLogo} alt="Asistenční služba" class="max-h-24 w-auto object-contain" />
       </div>
 
     </div>
