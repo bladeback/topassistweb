@@ -71,7 +71,6 @@ const currentYear = new Date().getFullYear();
         <p class="text-sm text-slate-300 leading-relaxed mb-4">
           <strong>TOP-assist24 s.r.o.</strong><br />
           Sídlo: Polanka 214/10, Třebíč 674 01<br />
-          Základna/Provozovna: Hrotovická 1202, Třebíč 674 01<br />
           IČO: 06214532 | DIČ: CZ06214532<br />
           Email: <a href="mailto:info@topassist.cz" class="hover:text-amber-500 transition-colors">info@topassist.cz</a>
         </p>
@@ -80,7 +79,15 @@ const currentYear = new Date().getFullYear();
 
     <!-- Spodní lišta s autorskými právy a doplňujícími informacemi -->
     <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
-      <p>© {currentYear} TOP-assist24 s.r.o. Všechna práva vyhrazena.</p>
+      <p>© <span id="copyright-year">{currentYear}</span> TOP-assist24 s.r.o. Všechna práva vyhrazena.</p>
     </div>
   </div>
 </footer>
+
+<script is:inline>
+  // Dynamicky aktualizujeme rok na straně klienta, aby byl vždy aktuální i u statického buildu
+  const copyrightYearEl = document.getElementById('copyright-year');
+  if (copyrightYearEl) {
+    copyrightYearEl.textContent = new Date().getFullYear().toString();
+  }
+</script>

@@ -13,6 +13,9 @@
   - Upravena stránka `cykloasistence.astro` (doplněno lepení a výměna duší, oprava řetězu a odstraněn box s pojištěním kol).
   - Aktualizovány popisy na hlavní stránce `index.astro` pro kartu cykloasistence.
   - Aktualizovány odkazy a názvy v patičce webu `Footer.astro`.
+  - **Dynamický rok a oprava adresy**:
+    - Rok v copyrightu v patičce (`Footer.astro`) se nyní automaticky aktualizuje na klientské straně podle aktuálního roku.
+    - Kompletně odstraněna chybná adresa provozovny (Hrotovická 1202, Třebíč) ze všech částí webu (kontakt, patička, SEO schémata) a nahrazena oficiálním sídlem firmy (Polanka 214/10).
 - **Přidání a optimalizace loga Redion v partnerských logách** (Vyřešeno: 17. 6. 2026)
   - Zkopírováno nové logo `Redion-logo.svg` ze složky `Loga` do `src/assets/images`.
   - Upravena tmavě modrá barva písma v SVG souboru loga Redion na bílou pro zajištění perfektní čitelnosti na tmavém pozadí.
