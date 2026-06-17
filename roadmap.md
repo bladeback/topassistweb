@@ -4,6 +4,15 @@
 *Všechny aktuální úkoly jsou dokončeny.*
 
 ## Historie splněných úkolů
+- **Reorganizace asistenčních služeb a úprava popisků** (Vyřešeno: 17. 6. 2026)
+  - Přejmenovány služby na úvodní stránce: "Odtah osobních aut" -> "Osobní a nákladní asistence" a "Vyproštění nákladních" -> "Odtah a vyproštění vozidel".
+  - Rozšířen popis asistenční služby o konkrétní úkony (výměna kola, lepení defektů, výměna ventilků, start booster, měření baterie, dovoz paliva).
+  - Aktualizována podstránka asistence `odtah-osobnich.astro` (nadpis, popis a checklist se specifikacemi pomoci).
+  - Aktualizována podstránka odtahu a vyproštění `vyprosteni-nakladni.astro` (sloučen původní text odtahu s vyprošťovacími prvky jako manipulace hydraulickou rukou, doprovodná vozidla, doprava dílů).
+  - Upravena stránka `autozamecnik.astro` pro nouzové otevírání aut (odstraněna věta o konkrétních minutách dojezdu v Třebíči a Jihlavě).
+  - Upravena stránka `cykloasistence.astro` (doplněno lepení a výměna duší, oprava řetězu a odstraněn box s pojištěním kol).
+  - Aktualizovány popisy na hlavní stránce `index.astro` pro kartu cykloasistence.
+  - Aktualizovány odkazy a názvy v patičce webu `Footer.astro`.
 - **Přidání a optimalizace loga Redion v partnerských logách** (Vyřešeno: 17. 6. 2026)
   - Zkopírováno nové logo `Redion-logo.svg` ze složky `Loga` do `src/assets/images`.
   - Upravena tmavě modrá barva písma v SVG souboru loga Redion na bílou pro zajištění perfektní čitelnosti na tmavém pozadí.
